@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Note</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url('./Valentine.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            flex-direction: column;
+        }
+        
+        .note {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 450px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        h1 {
+            color: #d6336c;
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: slideIn 1s ease-out forwards 1s;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            font-weight: 300;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .heart {
+            font-size: 22px;
+            color: #d6336c;
+            opacity: 0;
+            animation: slideIn 1s ease-out forwards 3s;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Paragraph Animation Delay */
+        p:nth-of-type(1) { animation: fadeIn 1s ease-out forwards 1.5s; }
+        p:nth-of-type(2) { animation: fadeIn 1s ease-out forwards 2s; }
+        p:nth-of-type(3) { animation: fadeIn 1s ease-out forwards 2.5s; }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .note {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .heart {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="note">
+        <h1>To the Love of My Life Jennifer Oshegelebi❤️</h1>
+        <p>
+            From the moment I met you, my world became brighter, and my heart felt lighter.  
+            Every smile you share, every laugh we exchange, and every moment we spend together  
+            fills my heart with joy I never knew I needed.  
+        </p>
+        <p>
+            You are the kindest, most beautiful soul, and being around you feels like basking  
+            in the warmth of the sun on a chilly morning. I catch myself thinking about you  
+            in the quiet moments, smiling at the thought of your voice, and feeling grateful  
+            for every second I get to spend with you.  
+        </p>
+        <p>
+            You make my days sweeter, my nights warmer, and my life infinitely more beautiful.  
+            So, on this special day, I just have one question to ask...  
+        </p>
+        <h1 class="heart">Will You Be My Valentine? ❤️</h1>
+    </div>
+</body>
+</html>
